@@ -1,3 +1,7 @@
+body{
+    background: url(../images/stevenuniverse.jpg);
+}
+
 .container {
     width: 960px;
 }

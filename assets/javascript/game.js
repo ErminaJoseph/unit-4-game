@@ -14,8 +14,7 @@ $(document).ready(function() {
 
     var ruby = Math.floor((Math.random() * 12) + 1);
     console.log(ruby);
-
-    $("#ruby").on("click", function() {
+    $("#ruby").on("click", function(event) {
         totalScore = totalScore + ruby;
     });
 
