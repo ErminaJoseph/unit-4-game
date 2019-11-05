@@ -44,6 +44,7 @@ $(document).ready(function() {
 
     if (totalScore === randomNumber) {
         wins++;
+        console.log(wins);
         randomNumber = Math.floor((Math.random() * 120) + 19);
         ruby = Math.floor((Math.random() * 12) + 1);
         sapphire = Math.floor((Math.random() * 12) + 1);
@@ -52,6 +53,7 @@ $(document).ready(function() {
         totalScore = 0;
         $("#total-score").html(totalScore);
         $("#wins").html(wins);
+        $("#random-number").html(randomNumber);
     } else if (totalScore > randomNumber) {
         losses++;
         console.log(losses);
@@ -63,6 +65,7 @@ $(document).ready(function() {
         totalScore = 0;
         $("#total-score").html(totalScore);
         $("#losses").html(losses);
-    }
+        $("#random-number").html(randomNumber);
+    } 
 
 });

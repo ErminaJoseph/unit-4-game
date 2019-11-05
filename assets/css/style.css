@@ -1,9 +1,26 @@
-body{
+body {
     background: url(../images/stevenuniverse.jpg);
+}
+
+header{
+    background: whitesmoke;
+    color: #ffff01;
+    width: 100%;
 }
 
 .container {
     width: 960px;
+}
+
+
+.instructions {
+    background: whitesmoke;
+    color: #b00d0e;
+    font-weight: 700;
+}
+
+#wins-losses, #total, #total-score, #random-number {
+    background: lightyellow;
 }
 
 img {
