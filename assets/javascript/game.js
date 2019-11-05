@@ -17,6 +17,7 @@ $(document).ready(function() {
     $("#ruby").on("click", function() {
         totalScore = totalScore + ruby;
         $("#total-score").html(totalScore);
+        checkScore();
     });
 
     var sapphire = Math.floor((Math.random() * 12) + 1);
@@ -24,6 +25,7 @@ $(document).ready(function() {
     $("#sapphire").on("click", function() {
         totalScore = totalScore + sapphire;
         $("#total-score").html(totalScore);
+        checkScore();
     });
 
 
@@ -32,6 +34,7 @@ $(document).ready(function() {
     $("#amethyst").on("click", function() {
         totalScore = totalScore + amethyst; 
         $("#total-score").html(totalScore);
+        checkScore();
     });
 
 
@@ -40,32 +43,36 @@ $(document).ready(function() {
     $("#garnet").on("click", function() { 
         totalScore = totalScore + garnet;
         $("#total-score").html(totalScore);
+        checkScore();
     });
 
-    if (totalScore === randomNumber) {
-        wins++;
-        console.log(wins);
-        randomNumber = Math.floor((Math.random() * 120) + 19);
-        ruby = Math.floor((Math.random() * 12) + 1);
-        sapphire = Math.floor((Math.random() * 12) + 1);
-        amethyst = Math.floor((Math.random() * 12) + 1);
-        garnet = Math.floor((Math.random() * 12) + 1);
-        totalScore = 0;
-        $("#total-score").html(totalScore);
-        $("#wins").html(wins);
-        $("#random-number").html(randomNumber);
-    } else if (totalScore > randomNumber) {
-        losses++;
-        console.log(losses);
-        randomNumber = Math.floor((Math.random() * 120) + 19);
-        ruby = Math.floor((Math.random() * 12) + 1);
-        sapphire = Math.floor((Math.random() * 12) + 1);
-        amethyst = Math.floor((Math.random() * 12) + 1);
-        garnet = Math.floor((Math.random() * 12) + 1);
-        totalScore = 0;
-        $("#total-score").html(totalScore);
-        $("#losses").html(losses);
-        $("#random-number").html(randomNumber);
-    } 
+    function checkScore() {
+        if (totalScore == randomNumber) {
+            wins++;
+            randomNumber = Math.floor((Math.random() * 120) + 19);
+            ruby = Math.floor((Math.random() * 12) + 1);
+            sapphire = Math.floor((Math.random() * 12) + 1);
+            amethyst = Math.floor((Math.random() * 12) + 1);
+            garnet = Math.floor((Math.random() * 12) + 1);
+            totalScore = 0;
+            $("#total-score").html(totalScore);
+            $("#wins").html("Wins: " + wins);
+            $("#random-number").html(randomNumber);
+        } else if (totalScore > randomNumber) {
+            losses++;
+            randomNumber = Math.floor((Math.random() * 120) + 19);
+            ruby = Math.floor((Math.random() * 12) + 1);
+            sapphire = Math.floor((Math.random() * 12) + 1);
+            amethyst = Math.floor((Math.random() * 12) + 1);
+            garnet = Math.floor((Math.random() * 12) + 1);
+            totalScore = 0;
+            $("#total-score").html(totalScore);
+            $("#losses").html("Losses: " + losses);
+            $("#random-number").html(randomNumber);
+        } else {
+            console.log("hello");
+        }
+    }
 
+    
 });
