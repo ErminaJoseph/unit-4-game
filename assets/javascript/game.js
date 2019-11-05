@@ -1,6 +1,7 @@
 $(document).ready(function() { 
     var randomNumber = Math.floor((Math.random() * 120) + 19);
     $("#random-number").text(randomNumber);
+    // Console log for verification purposes only.
     console.log(randomNumber);
     
     var wins = 0;
@@ -13,6 +14,7 @@ $(document).ready(function() {
     $("#total-score").text(totalScore);
 
     var ruby = Math.floor((Math.random() * 12) + 1);
+    // Console log for verification purposes only.
     console.log(ruby);
     $("#ruby").on("click", function() {
         totalScore = totalScore + ruby;
@@ -21,6 +23,7 @@ $(document).ready(function() {
     });
 
     var sapphire = Math.floor((Math.random() * 12) + 1);
+    // Console log for verification purposes only.
     console.log(sapphire);
     $("#sapphire").on("click", function() {
         totalScore = totalScore + sapphire;
@@ -30,6 +33,7 @@ $(document).ready(function() {
 
 
     var amethyst = Math.floor((Math.random() * 12) + 1);
+    // Console log for verification purposes only.
     console.log(amethyst);
     $("#amethyst").on("click", function() {
         totalScore = totalScore + amethyst; 
@@ -39,6 +43,7 @@ $(document).ready(function() {
 
 
     var garnet = Math.floor((Math.random() * 12) + 1);
+    // Console log for verification purposes only.
     console.log(garnet);
     $("#garnet").on("click", function() { 
         totalScore = totalScore + garnet;
@@ -55,6 +60,12 @@ $(document).ready(function() {
             amethyst = Math.floor((Math.random() * 12) + 1);
             garnet = Math.floor((Math.random() * 12) + 1);
             totalScore = 0;
+            // Console log for verification purposes only.
+            console.log(randomNumber);
+            console.log(ruby);
+            console.log(sapphire);
+            console.log(amethyst);
+            console.log(garnet);
             $("#total-score").html(totalScore);
             $("#wins").html("Wins: " + wins);
             $("#random-number").html(randomNumber);
@@ -66,10 +77,17 @@ $(document).ready(function() {
             amethyst = Math.floor((Math.random() * 12) + 1);
             garnet = Math.floor((Math.random() * 12) + 1);
             totalScore = 0;
+            // Console log for verification purposes only.
+            console.log(randomNumber)
+            console.log(ruby);
+            console.log(sapphire);
+            console.log(amethyst);
+            console.log(garnet);
             $("#total-score").html(totalScore);
             $("#losses").html("Losses: " + losses);
             $("#random-number").html(randomNumber);
         } else {
+            // Console log for verification purposes only.
             console.log("hello");
         }
     }
